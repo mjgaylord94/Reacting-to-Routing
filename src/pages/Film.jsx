@@ -12,7 +12,7 @@ const Film = () => {
         fetch(`https://ghibliapi.herokuapp.com/films/${filmid}`)
             .then(res => res.json())
             .then(film => setFilm(film))
-    }, []);
+    }, [filmid]);
 
     if (film === null) {
         return (

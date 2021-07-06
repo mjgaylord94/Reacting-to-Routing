@@ -12,7 +12,7 @@ const Person = () => {
         fetch(`https://ghibliapi.herokuapp.com/people/${personid}`)
             .then(res => res.json())
             .then(person => setPerson(person))
-    }, []);
+    }, [personid]);
 
     if (person === null) {
         return (
